@@ -9,7 +9,7 @@
 
 // OSX doesn't like putting FIFOs in /dev for some reason
 #ifndef OS_MAC
-const char *const devpath = "/dev/input/ckb";
+const char *const devpath = "/tmp/input/ckb";
 #else
 const char *const devpath = "/var/run/ckb";
 #endif
@@ -64,13 +64,13 @@ void check_chmod(const char *pathname, mode_t mode){
 ///
 /// \brief _updateconnected Update the list of connected devices.
 ///
-/// \<devicepath\> normally is /dev/input/ckb or /input/ckb.
+/// \<devicepath\> normally is /tmp/input/ckb or /input/ckb.
 /// \n Open the normal file under \<devicepath\>0/connected for writing.
 /// For each device connected, print its devicepath+number,
 /// the serial number of the usb device and the usb name of the device connected to that usb interface.
 /// \n eg:
-/// \n /dev/input/ckb1 0F022014ABABABABABABABABABABA999 Corsair K95 RGB Gaming Keyboard
-/// \n /dev/input/ckb2 0D02303DBACBACBACBACBACBACBAC998 Corsair M65 RGB Gaming Mouse
+/// \n /tmp/input/ckb1 0F022014ABABABABABABABABABABA999 Corsair K95 RGB Gaming Keyboard
+/// \n /tmp/input/ckb2 0D02303DBACBACBACBACBACBACBAC998 Corsair M65 RGB Gaming Mouse
 ///
 /// Set the file ownership to root.
 /// If the glob var gid is explicitly set to something different from -1 (the initial value), set file permission to 640, else to 644.

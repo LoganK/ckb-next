@@ -388,7 +388,7 @@ elseif (LINUX)
             @ONLY)
 
         if (SAFE_INSTALL)
-            if (EXISTS "/dev/input/ckb0/pid")
+            if (EXISTS "/tmp/input/ckb0/pid")
                 message(STATUS "Running ckb-next-daemon detected")
                 install(CODE "message(STATUS \"${CKB_NEXT_INIT_SYSTEM}: stoppping ${daemon}\")")
                 install(CODE "execute_process(COMMAND sudo /etc/init.d/ckb-next-daemon.sh stop)")

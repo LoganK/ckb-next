@@ -6,7 +6,7 @@
 extra_started_commands="reload"
 command="@CMAKE_INSTALL_PREFIX@/bin/ckb-next-daemon"
 description="Corsair Keyboards and Mice Daemon"
-pidfile="/dev/input/ckb0/pid"
+pidfile="/tmp/input/ckb0/pid"
 logfile="/var/log/ckb-next-daemon.log"
 
 start() {

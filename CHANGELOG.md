@@ -101,7 +101,7 @@ Important bugfixes:
 - Binding commands to wheels will now repeat properly
 - QuaZip is no longer required for daemon-only builds
 - KissFFT is now built as a static library
-- Symbolic links are now created in /dev/input/by-id for evdev users
+- Symbolic links are now created in /tmp/input/by-id for evdev users
 - Fixed a regression for devices using the legacy protocol
 - The forwards and backwards keys are now bound by default on Mac
 - Workaround for using the Polaris on macOS

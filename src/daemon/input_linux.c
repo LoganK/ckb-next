@@ -9,8 +9,8 @@
 int uinputopen(struct uinput_user_dev* indev, int mouse){
     int fd = open("/dev/uinput", O_RDWR);
     if(fd < 0){
-        // If that didn't work, try /dev/input/uinput instead
-        fd = open("/dev/input/uinput", O_RDWR);
+        // If that didn't work, try /tmp/input/uinput instead
+        fd = open("/tmp/input/uinput", O_RDWR);
         if(fd < 0){
             ckb_err("Failed to open uinput: %s\n", strerror(errno));
             return 0;

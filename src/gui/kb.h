@@ -107,7 +107,7 @@ public:
     inline int getMacroNumber () { return macroNumber; }
 
     ///
-    /// \brief getMacroPath returns the macroPath (e.g. /dev/input/ckb1/notify),
+    /// \brief getMacroPath returns the macroPath (e.g. /tmp/input/ckb1/notify),
     /// which we have saved in the constructor.
     /// For usage with macro definions, this param must only be readable.
     /// So there is no setter.

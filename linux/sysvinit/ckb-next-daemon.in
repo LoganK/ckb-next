@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 NAME="ckb-next-daemon"
-PID="/dev/input/ckb0/pid"
+PID="/tmp/input/ckb0/pid"
 DAEMON="@CMAKE_INSTALL_PREFIX@/bin/ckb-next-daemon"
 
 . /lib/lsb/init-functions
